@@ -1,5 +1,8 @@
 <template>
+<<<<<<< HEAD
   <section>
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
        <!-- add a slider here -->
        <div>
               <TheCarousel class="carousel"  v-slot="{currentSlide}">
@@ -11,6 +14,7 @@
                      </TheSlider>
               </TheCarousel>
        </div>
+<<<<<<< HEAD
 
        <!-- starts of feature content box -->
    
@@ -48,11 +52,14 @@
    </div> 
  
  </section>
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 </template>
 
 <script>
 import TheCarousel from '@/components/TheCarousel.vue';
 import TheSlider from '@/components/TheSlider.vue';
+<<<<<<< HEAD
 import featureContentBox from '@/featureContentBox';  //import the feature contents
 export default {
        components:{
@@ -69,6 +76,11 @@ export default {
        //        this.links = links
        //         }
          setup(){
+=======
+export default {
+       components:{TheCarousel,TheSlider},
+       setup(){
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
               const carouselSlides = ['lady.jpeg', 'lady-2.jpeg','lady-3.jpeg']
 
               return{carouselSlides}
@@ -76,11 +88,15 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style scoped>     
 section{
        background: #F2F4F7;
       
 } 
+=======
+<style scoped>
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 .carousel{
        position: relative;
        overflow: hidden;
@@ -94,6 +110,7 @@ section{
        top:0;
        left:0;
 }
+<<<<<<< HEAD
 .white-bg{
        background: #ffffff;
        top: -28px;
@@ -101,11 +118,14 @@ section{
        padding: 20px 70px 100px 50px;
 
 }
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 img{
        min-width: 100%;
        height:90vh;
        background-position: center center;
        object-fit: cover;
+<<<<<<< HEAD
        
 }
 
@@ -209,5 +229,7 @@ p{
 video{
        background: red;
        z-index: 5;
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 </style>

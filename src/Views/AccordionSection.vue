@@ -52,7 +52,10 @@ dt{
        position: relative;
        margin: auto;
        text-align: left; 
+<<<<<<< HEAD
        font-family: 'Inter', sans-serif;
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 
 }
 dd{
@@ -61,9 +64,12 @@ dd{
        position: relative;
        margin: auto;
        text-align: left;   
+<<<<<<< HEAD
        font-size: 17px;
        line-height: 25px;
        font-family: 'Inter', sans-serif;
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 i{
        position: absolute;

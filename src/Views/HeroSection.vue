@@ -28,6 +28,7 @@
       </h2>
 
       <!-- <video src="" controls>   </video> -->
+<<<<<<< HEAD
 
       <div>
         <video class="youtubevideo" width="900" height="500" ref="videoPlayer">
@@ -44,6 +45,20 @@
     
 
    
+=======
+      <div>
+        <iframe
+          class="youtubevideo"
+          width="800"
+          height="475"
+          src="https://www.youtube.com/embed/lKw6uqtGFfo"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
     </div>
     <!-- start of the content box -->
     <div class="contentboxWrapper">
@@ -52,7 +67,11 @@
 
         <div>
           <li class="titleBox">{{ content.title }}</li>
+<<<<<<< HEAD
           <li class="contentboxpara">{{ content.description }}</li>
+=======
+          <li>{{ content.description }}</li>
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
         </div>
       </ul>
     </div>
@@ -63,7 +82,11 @@
       <div><img src="@/assets/lady.png" /></div>
 
       <div class="growth">
+<<<<<<< HEAD
         <h2>Grow faster than your competitors</h2>
+=======
+        <h2>Grow faster than your compititors</h2>
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
         <p>
           Single Page Applications are web apps or sites that interact with the
           user by dynamically rewriting the current page rather than loading
@@ -102,6 +125,7 @@
       </div>
     </div>
     <!-- start of carousel -->
+<<<<<<< HEAD
     <div class="carousel">
       <TheCarousel v-slot="{ currentSlide }">
         <TheSlider v-for="(slide, index) in carouselSlides" :key="index">
@@ -118,10 +142,28 @@
             </div>
           </div>
         </TheSlider>
+=======
+    <div>
+      <TheCarousel class="carousel" v-slot="{ currentSlide }">
+       
+        <TheSlider v-for="(slide, index) in carouselSlides" :key="index">
+          <div v-show="currentSlide === index + 1" class="slide-info">
+            <!-- <img class="slideImg" :src="require(`../assets/${slide}`)" /> -->
+           
+            <h2 class="slide-text">{{slide.description}} </h2>
+            <p class="slide-name">{{ slide.name}}</p>
+            <p class="slide-role">{{ slide.role }}</p>
+            <img :src="require(`../assets/${slide.image}`)"/>
+          
+          </div>
+        </TheSlider>
+       
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
       </TheCarousel>
     </div>
     <!-- start of form section -->
     <div class="start-of-form">
+<<<<<<< HEAD
       <div>
         <h2>Signup for early access offer!</h2>
         <p>
@@ -149,6 +191,30 @@
 
     <!-- start of FAQs section -->
     <AccordionSection></AccordionSection>
+=======
+        <div>
+         <h2>Signup for early access offer!</h2>
+         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada 
+          feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim</p>
+
+          <form @submit.prevent="onSubmit">
+            <input v-model="username" type="text" placeholder="Name"/>
+            <!-- <label>{{ username }}</label> -->
+            <input v-model="email" type="email" placeholder="Email"/>
+            <button class="formBtn" @click="submitForm">Submit</button>
+          </form>
+        </div>
+        <div>
+          <img class="signupImg" src="@/assets/Signup-Image.png"/>
+        </div>
+
+    </div>
+  <!-- end of form section -->
+
+    <!-- start of FAQs section -->
+   <AccordionSection ></AccordionSection>
+ 
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   </article>
 </template>
 <script>
@@ -171,16 +237,24 @@ export default{
                               "https://media.istockphoto.com/id/1348229043/photo/business-accountant-accountant-and-bookkeeper.jpg?b=1&s=170667a&w=0&k=20&c=augRvCO7cjzN58g8yvwsM0w9zXjw8hDjLN_5TwXYcc8="
                             ],
                       username:'',
+<<<<<<< HEAD
                       email:''  ,
                       playing: false,
                       
       isPaused: true
+=======
+                      email:''      
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 
               }
        },
 
               setup(){
+<<<<<<< HEAD
               const carouselSlides = [
+=======
+              const carouselSlides = [ 
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
                      {description:'This app is amazing Now im able to manage all my freelancing and agency work under one place. it make my life easy',
                       role:'freelancer',
                       name:'ASHUTOSH MEHTA',
@@ -201,6 +275,7 @@ export default{
          submitForm(){
            const ans= this.username + " " +this.email
              console.log(ans)
+<<<<<<< HEAD
          },
 
          togglePlayPause() {
@@ -232,6 +307,14 @@ export default{
 p {
   font-family: "Inter", sans-serif;
 }
+=======
+         }
+       }
+}
+</script>
+
+<style scoped>
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 .pink {
   height: 100vh;
   width: 100%;
@@ -250,15 +333,25 @@ section {
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 .wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+<<<<<<< HEAD
   /* max-width:fit-content; */
 }
 .heroImg {
   max-width: 750px;
+=======
+}
+.heroImg {
+  width: 750px;
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   height: auto;
   position: relative;
   left: 0;
@@ -269,6 +362,7 @@ body {
   position: relative;
   top: 150px;
   left: 5rem;
+<<<<<<< HEAD
   max-width: 801px;
   margin: 0 auto;
 }
@@ -283,6 +377,17 @@ h1 {
 .para {
   font-size: 17px;
   line-height: 25px;
+=======
+}
+h1 {
+  font-size: 70px;
+  line-height: 70px;
+  padding-left: 2rem;
+  text-transform: capitalize;
+}
+.para {
+  font-size: 17px;
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   padding-right: 10rem;
   padding-left: 2rem;
   position: relative;
@@ -313,11 +418,18 @@ h1 {
 
 button {
   background: #e0ff00;
+<<<<<<< HEAD
   font-size: 17px;
   line-height: 20px;
   padding: 10px;
   margin-left: 2rem;
   font-family: "Inter", sans-serif;
+=======
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 2rem;
+
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   border-radius: 5px;
   width: 10rem;
   border: none;
@@ -331,10 +443,17 @@ button:hover {
   padding: 10rem 2rem;
 }
 
+<<<<<<< HEAD
 .wrapper h2 {
   width: 880px;
 }
 h2 {
+=======
+.wrapper h2{
+  width:795px;
+}
+ h2 {
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   font-size: 50px;
   line-height: 60px;
   margin: auto;
@@ -380,9 +499,12 @@ ul:nth-child(2) {
   background: #f2f0f0;
   transition: all 0.3s linear;
 }
+<<<<<<< HEAD
 .contentboxpara:nth-child(2) {
   padding-top: 20px;
 }
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 ul:nth-child(2):hover {
   background: #000000;
   color: #ffffff;
@@ -404,6 +526,7 @@ ul:hover {
   transform: scale(0.9);
 }
 .titleBox {
+<<<<<<< HEAD
   font-size: 20px;
   line-height: 25px;
   padding: 20px 0px 0px 0px;
@@ -411,6 +534,10 @@ ul:hover {
 .contentboxpara {
   font-family: "Inter", sans-serif;
   font-size: 17px;
+=======
+  font-size: 30px;
+  padding: 20px 0px;
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 /* end of the content box  */
 
@@ -434,8 +561,12 @@ button:hover {
   flex-direction: row;
   gap: 100px;
   flex-wrap: nowrap;
+<<<<<<< HEAD
   justify-content: center;
   align-items: center;
+=======
+
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   padding: 65px 150px 65px 100px;
 }
 /* .first{
@@ -448,7 +579,10 @@ button:hover {
   width: 34rem;
 }
 .growth h2 {
+<<<<<<< HEAD
   font-size: 35px;
+=======
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
   width: 620px;
 }
 
@@ -469,6 +603,7 @@ button:hover {
   position: relative;
   overflow: hidden;
   max-height: 100vh;
+<<<<<<< HEAD
   padding: 40px 0px;
   height: 60vh;
   background: #140d2d;
@@ -481,12 +616,27 @@ button:hover {
   top: 299px;
   left: 19rem;
   width: 80px;
+=======
+  padding:40px 0px;
+  height: 60vh;
+  background: #140D2D;
+}
+.carousel img{
+       position: absolute;
+       /* border-radius:70%; */
+       height:12vh;
+       object-fit: cover;
+       top:290px;
+       width:80px;
+       left:300px;
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 .slide-info {
   position: absolute;
   width: 100%;
   height: 80%;
   top: 40;
+<<<<<<< HEAD
   left: 0;
 }
 .slide-text {
@@ -495,10 +645,21 @@ button:hover {
   font-size: 38px;
   padding-top: 30px;
   color: #fff;
+=======
+  left: 0; 
+  
+}
+.slide-text{
+  /* min-width: 100%;
+  height: 40vh; */
+  padding-top:30px;
+  color:#fff;
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 /* .slideView{
        font-size: 50px;
 } */
+<<<<<<< HEAD
 .slide-name {
   position: absolute;
   top: 300px;
@@ -538,11 +699,58 @@ button:hover {
 .start-of-form div:nth-child(1) {
   max-width: 545px;
   display: block;
+=======
+.slide-name{
+  position: absolute;
+  top:300px;
+left:390px;
+color:#fff;
+}
+.slide-role{
+position: absolute;
+top:330px;
+left:390px;
+color:#8F85B2;
+}
+
+
+.start-of-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+  margin: 0px 50PX;
+  padding:130px 0px 80px 0px;
+
+}
+.start-of-form h2{
+  font-size: 50px;
+    color: #000000;
+    text-transform: capitalize;
+    padding: 10px 26px;
+    width: 32rem;
+
+ }
+ .formBtn{
+  margin-left:23px;
+ }
+.start-of-form p{
+  color:#000000;
+  font-size:18px;
+  margin-left:25px;
+
+} 
+.start-of-form div:nth-child(1){ 
+    width: 434px;
+    display: block;
+ 
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 }
 /* .start-of-form div:nth-child(2){
  
   width:40%;
 } */
+<<<<<<< HEAD
 .signupImg {
   width: 516px;
   max-width: 1500px;
@@ -589,5 +797,19 @@ i{
 }
 
 
+=======
+.signupImg{
+  width: 516px;
+}
+input{
+  padding:10px;
+  width:230px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom:20px;
+  margin-left:23px;
+}
+>>>>>>> 410a7f8622678b3a9cffb94851aa2b2c00249099
 
 </style>
