@@ -568,11 +568,14 @@ input {
   margin: 0 auto;
 }
 .playericon {
-  position: absolute;
-  left: 40rem;
-  top: 88rem;
-  bottom: 0rem;
-  width: 100px;
+  position: relative;
+   width: 100px; /* or any other fixed value */
+  max-width: 100px; /* prevent button from expanding */
+  min-width: 100px; /* prevent button from shrinking */
+  left: 23rem;
+  /* top: 88rem; */
+  bottom: 18rem;
+  /* width: 100px; */
   height: 8vh;
   padding: 10px;
   cursor: pointer;
@@ -587,6 +590,14 @@ i{
 .hidden {
   display: none;
 }
+.vid{
+  width:900px;
+  min-width: 900px;
+  max-width:900px;
+  margin:auto;
+}
+
+
 
 
 
