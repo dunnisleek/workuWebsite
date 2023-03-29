@@ -29,7 +29,7 @@
 
       <!-- <video src="" controls>   </video> -->
 
-      <div>
+      <div class="vid">
         <video class="youtubevideo" width="900" height="500" ref="videoPlayer">
           <source src="@/assets/sunset-153976.mp4" type="video/mp4" :class="{ 'hidden': !playing }"/>
           Your browser does not support the video tag.
